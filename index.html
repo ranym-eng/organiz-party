@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Organiz' Party — To-do, compte à rebours, budget</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <!-- Décor collé sur l’écran (ne gêne pas les clics) -->
+  <div class="floater-layer" aria-hidden="true">
+    <span class="floater f1">⭐</span>
+    <span class="floater f2">🌈</span>
+    <span class="floater f3">✏️</span>
+    <span class="floater f4">🎉</span>
+    <span class="floater f5">💸</span>
+    <span class="floater f6">⏰</span>
+    <span class="floater f7">🦄</span>
+    <span class="floater f8">✨</span>
+  </div>
+
+  <header class="site-header">
+    <div class="wrap header-bar">
+      <a href="#" class="logo"><span class="logo-emoji">📌</span> Organiz’ Party</a>
+      <button type="button" class="menu-btn" id="menuBtn" aria-label="Menu">☰</button>
+      <nav class="site-nav" id="siteNav">
+        <a href="#todo"><span class="nav-ico">📝</span> To-do</a>
+        <a href="#compte"><span class="nav-ico">🗓️</span> Compte à rebours</a>
+        <a href="#budget"><span class="nav-ico">🐷</span> Budget</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="wrap hero-grid">
+        <div class="hero-photos" aria-hidden="true">
+          <figure class="polaroid polaroid-a">
+            <img src="https://images.unsplash.com/photo-1511795409834-ef04bbd61622?w=280&h=280&fit=crop" alt="" width="140" height="140" loading="lazy">
+            <figcaption>Good vibes</figcaption>
+          </figure>
+          <figure class="polaroid polaroid-b">
+            <img src="https://images.unsplash.com/photo-1530103862676-de8c729de1af?w=280&h=280&fit=crop" alt="" width="140" height="140" loading="lazy">
+            <figcaption>Party time</figcaption>
+          </figure>
+          <figure class="polaroid polaroid-c">
+            <img src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=280&h=280&fit=crop" alt="" width="140" height="140" loading="lazy">
+            <figcaption>Plan &amp; €</figcaption>
+          </figure>
+        </div>
+        <div class="hero-copy">
+          <span class="tape-badge">100% maison · HTML CSS JS</span>
+          <h1>Organisation <em>sans prise de tête</em></h1>
+          <p class="hero-text">
+            To-do qui claque, compte à rebours pour le jour J, et budget express. Comme des Post-it… mais en mieux.
+          </p>
+          <div class="hero-stickers">
+            <span class="mini-sticker ms1">Cool</span>
+            <span class="mini-sticker ms2">Let’s go</span>
+            <span class="mini-sticker ms3">Boom</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="wrap main-grid">
+      <section class="card card-tilt card-yellow" id="todo">
+        <span class="card-sticker corner-tl" aria-hidden="true">📝</span>
+        <span class="card-sticker corner-br" aria-hidden="true">✅</span>
+        <h2>To-do du jour</h2>
+        <p class="card-intro">Coche, barre, supprime — tu bosses comme un·e boss.</p>
+        <div class="row">
+          <input type="text" id="texteTache" class="input-text" placeholder="Ex. : réviser + manger des chips…">
+          <button type="button" class="btn btn-primary" id="btnAjouter">Zou ✨</button>
+        </div>
+        <ul id="listeTaches" class="task-list"></ul>
+      </section>
+
+      <section class="card card-tilt card-pink card-accent" id="compte">
+        <span class="card-sticker corner-tl" aria-hidden="true">⏳</span>
+        <span class="card-sticker corner-br" aria-hidden="true">🎊</span>
+        <h2>Compte à rebours</h2>
+        <p class="card-intro">Vacances, exam, anniv… le temps file, on te le montre en GROS.</p>
+        <label class="label-date" for="dateCible">Date cible</label>
+        <input type="date" id="dateCible" class="input-date">
+        <div class="countdown-box" id="afficheCompte" aria-live="polite">Choisis une date.</div>
+      </section>
+
+      <section class="card card-tilt card-mint" id="budget">
+        <span class="card-sticker corner-tl" aria-hidden="true">💰</span>
+        <span class="card-sticker corner-br" aria-hidden="true">🤑</span>
+        <h2>Budget du mois</h2>
+        <p class="card-intro">Tape tes chiffres : la calculette, c’est nous (promis, pas ChatGPT).</p>
+        <div class="budget-grid">
+          <label class="budget-line">🚌 Transport
+            <input type="number" id="budgetTransport" class="input-num" min="0" step="0.01" value="0">
+          </label>
+          <label class="budget-line">🎮 Loisirs
+            <input type="number" id="budgetLoisirs" class="input-num" min="0" step="0.01" value="0">
+          </label>
+          <label class="budget-line">🛒 Courses
+            <input type="number" id="budgetCourses" class="input-num" min="0" step="0.01" value="0">
+          </label>
+          <label class="budget-line">📦 Autres
+            <input type="number" id="budgetAutres" class="input-num" min="0" step="0.01" value="0">
+          </label>
+        </div>
+        <div class="total-bar">
+          Total : <span id="totalBudget">0,00</span> € <span class="total-emoji">🎉</span>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap footer-inner">
+      <span class="footer-sticker" aria-hidden="true">Made with 💜</span>
+      <p>Par Tasnym Mejri</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
