@@ -1,43 +1,49 @@
 # Organiz’ Party
 
-Petit site web **HTML / CSS / JavaScript** (niveau débutant) : organisation du quotidien avec une interface ludique.
+A small **HTML / CSS / JavaScript** (beginner-level) site for everyday organization, with a playful UI.
 
-## Contenu du site
+## Live demo
 
-- **To-do du jour** — ajouter des tâches, les cocher (barrées) ou les supprimer (`createElement`, `appendChild`).
-- **Compte à rebours** — choisir une date (vacances, examen, anniversaire…) et afficher le temps restant (`Date`, `setInterval`).
-- **Budget du mois** — saisir des montants par catégorie (transport, loisirs, courses, autres) ; le total se met à jour en direct.
+**[https://ranym-eng.github.io/organiz-party/](https://ranym-eng.github.io/organiz-party/)**
 
-## Structure du projet
+Repository: [github.com/ranym-eng/organiz-party](https://github.com/ranym-eng/organiz-party)
+
+## Features
+
+- **Daily to-do** — add tasks, mark them done (strikethrough), or delete them (`createElement`, `appendChild`).
+- **Countdown** — pick a date (holidays, exam, birthday…) and see the time left (`Date`, `setInterval`).
+- **Monthly budget** — enter amounts per category (transport, leisure, groceries, other); the total updates live.
+
+## Project structure
 
 ```
-tasnym js/
-├── index.html      — page principale
+organiz-party/
+├── index.html      — main page
 ├── css/
-│   └── style.css   — mise en page et style
+│   └── style.css   — layout and styling
 ├── js/
 │   └── main.js     — interactions (menu, to-do, timer, budget)
 └── README.md
 ```
 
-## Lancer le site
+## Run locally
 
-1. Ouvre **`index.html`** dans ton navigateur (double-clic ou glisser-déposer dans Chrome / Firefox / Edge).
-2. Pour les **photos** du bandeau (Unsplash) et la **police Fredoka** (Google Fonts), une connexion **Internet** est nécessaire.
+1. Open **`index.html`** in your browser (double-click or drag into Chrome / Firefox / Edge).
+2. **Internet** is required for hero **photos** (Unsplash) and the **Fredoka** font (Google Fonts).
 
 ## Git
 
-Dépôt initialisé avec `git init`. Pour lier un dépôt distant (GitHub, etc.) :
+```bash
+git clone https://github.com/ranym-eng/organiz-party.git
+cd organiz-party
+```
+
+To push updates:
 
 ```bash
-git remote add origin URL_DE_TON_REPO.git
 git add .
-git commit -m "Premier commit — site Organiz Party"
+git commit -m "Your message"
 git push -u origin main
 ```
 
-*(Remplace `main` par `master` si ton dépôt utilise ce nom.)*
-
-## Auteur
-
-Projet scolaire — HTML, CSS & JavaScript.
+*(Use `master` instead of `main` if your remote uses that branch name.)*
