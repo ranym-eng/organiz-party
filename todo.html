@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>To-do — Organiz' Party</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="floater-layer" aria-hidden="true">
+    <span class="floater f1">⭐</span>
+    <span class="floater f3">✏️</span>
+    <span class="floater f8">✨</span>
+  </div>
+
+  <header class="site-header">
+    <div class="wrap header-bar">
+      <a href="index.html" class="logo"><span class="logo-emoji">📌</span> Organiz' Party</a>
+      <button type="button" class="menu-btn" id="menuBtn" aria-label="Menu">☰</button>
+      <nav class="site-nav" id="siteNav">
+        <a href="index.html"><span class="nav-ico">🏠</span> Accueil</a>
+        <a href="todo.html" class="is-active" aria-current="page"><span class="nav-ico">📝</span> To-do</a>
+        <a href="compte.html"><span class="nav-ico">🗓️</span> Compte à rebours</a>
+        <a href="budget.html"><span class="nav-ico">🐷</span> Budget</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <div class="wrap main-grid">
+      <section class="card card-tilt card-yellow">
+        <span class="card-sticker corner-tl" aria-hidden="true">📝</span>
+        <span class="card-sticker corner-br" aria-hidden="true">✅</span>
+        <h2>To-do du jour</h2>
+        <p class="card-intro">Coche, barre, supprime — tu bosses comme un·e boss.</p>
+        <div class="row">
+          <input type="text" id="texteTache" class="input-text" placeholder="Ex. : réviser + manger des chips…">
+          <button type="button" class="btn btn-primary" id="btnAjouter">Zou ✨</button>
+        </div>
+        <ul id="listeTaches" class="task-list"></ul>
+      </section>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap footer-inner">
+      <span class="footer-sticker" aria-hidden="true">Made with 💜</span>
+      <p>By Ranym Mejri</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
